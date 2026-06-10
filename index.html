@@ -15,102 +15,105 @@
     --green-light: #EAF3DE; --green-text: #3B6D11;
     --gray-light: #F1EFE8; --gray-text: #5F5E5A;
     --bg: #f5f4f0; --card: #ffffff;
-    --text: #1a1a1a; --text-muted: #6b6b6b; --text-hint: #999;
-    --border: rgba(0,0,0,0.1); --radius: 12px; --radius-sm: 8px;
+    --text: #1a1a1a; --text-muted: #6b6b6b; --text-hint: #9a9a9a;
+    --border: rgba(0,0,0,0.09); --radius: 12px; --radius-sm: 8px;
   }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
-  a { color: inherit; }
+  a { color: inherit; text-decoration: none; }
 
-  /* HEADER */
   .hero { background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%); padding: 2.5rem 2rem 2rem; color: white; }
-  .hero-inner { max-width: 860px; margin: 0 auto; }
-  .hero h1 { font-size: 28px; font-weight: 600; margin-bottom: 0.4rem; }
-  .hero p { font-size: 15px; opacity: 0.85; margin-bottom: 1rem; }
+  .hero-inner { max-width: 900px; margin: 0 auto; }
+  .hero h1 { font-size: 26px; font-weight: 600; margin-bottom: 0.35rem; color: white; }
+  .hero p { font-size: 14px; opacity: 0.85; margin-bottom: 1rem; }
   .meta-pills { display: flex; gap: 8px; flex-wrap: wrap; }
-  .meta-pill { background: rgba(255,255,255,0.18); border-radius: 20px; padding: 4px 12px; font-size: 12px; display: flex; align-items: center; gap: 5px; }
+  .meta-pill { background: rgba(255,255,255,0.18); border-radius: 20px; padding: 4px 12px; font-size: 12px; }
 
-  /* NAV */
-  .nav-wrap { background: white; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 10; }
-  .nav-inner { max-width: 860px; margin: 0 auto; padding: 0 1.5rem; display: flex; gap: 4px; overflow-x: auto; }
-  .tab-btn { padding: 14px 18px; border: none; background: none; font-size: 14px; font-weight: 500; color: var(--text-muted); cursor: pointer; border-bottom: 2px solid transparent; white-space: nowrap; transition: all 0.15s; }
+  .nav-wrap { background: white; border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 10; box-shadow: 0 1px 4px rgba(0,0,0,0.06); }
+  .nav-inner { max-width: 900px; margin: 0 auto; padding: 0 1.5rem; display: flex; gap: 2px; overflow-x: auto; }
+  .tab-btn { padding: 14px 16px; border: none; background: none; font-size: 13px; font-weight: 500; color: var(--text-muted); cursor: pointer; border-bottom: 2px solid transparent; white-space: nowrap; transition: all 0.15s; }
   .tab-btn:hover { color: var(--teal); }
   .tab-btn.active { color: var(--teal); border-bottom-color: var(--teal); }
 
-  /* MAIN */
-  .main { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
+  .main { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem 4rem; }
   .section { display: none; }
   .section.active { display: block; }
 
-  /* DAY CARDS */
-  .day-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 1rem; overflow: hidden; }
-  .day-header { padding: 1rem 1.25rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 14px; }
-  .day-badge { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 600; flex-shrink: 0; }
+  .day-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 1.25rem; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .day-header { padding: 1rem 1.25rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 14px; background: #fafaf9; }
+  .day-badge { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 700; flex-shrink: 0; }
   .badge-bcn { background: var(--teal-light); color: var(--teal-text); }
   .badge-salou { background: var(--blue-light); color: var(--blue-text); }
-  .day-header-text .day-title { font-size: 16px; font-weight: 600; }
-  .day-header-text .day-date { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
-  .day-body { padding: 0.5rem 0; }
+  .day-title { font-size: 15px; font-weight: 600; color: var(--text); }
+  .day-date { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+  .day-body { padding: 0.25rem 0; }
 
-  /* ACTIVITIES */
-  .activity { display: flex; gap: 14px; padding: 12px 1.25rem; border-bottom: 1px solid var(--border); align-items: flex-start; }
+  .activity { display: flex; gap: 14px; padding: 11px 1.25rem; border-bottom: 1px solid var(--border); align-items: flex-start; }
   .activity:last-child { border-bottom: none; }
-  .act-icon { width: 34px; height: 34px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 16px; }
+  .act-icon { width: 34px; height: 34px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 17px; margin-top: 1px; }
   .icon-culture { background: var(--purple-light); }
   .icon-fun { background: var(--teal-light); }
   .icon-transport { background: var(--gray-light); }
   .icon-beach { background: var(--blue-light); }
   .icon-food { background: var(--coral-light); }
-  .act-info { flex: 1; }
-  .act-name { font-size: 14px; font-weight: 600; margin-bottom: 3px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-  .act-desc { font-size: 13px; color: var(--text-muted); line-height: 1.55; margin-bottom: 6px; }
-  .act-footer { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .act-info { flex: 1; min-width: 0; }
+  .act-name { font-size: 14px; font-weight: 600; margin-bottom: 3px; line-height: 1.4; }
+  .act-desc { font-size: 12.5px; color: var(--text-muted); line-height: 1.55; margin-bottom: 7px; }
+  .act-footer { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
   .price-tag { font-size: 11px; font-weight: 600; padding: 3px 9px; border-radius: 10px; }
   .price-free { background: var(--green-light); color: var(--green-text); }
   .price-low { background: var(--teal-light); color: var(--teal-text); }
   .price-mid { background: var(--amber-light); color: var(--amber-text); }
   .price-high { background: var(--coral-light); color: var(--coral-text); }
-  .maps-link { font-size: 11px; color: var(--blue-text); text-decoration: none; background: var(--blue-light); padding: 3px 9px; border-radius: 10px; display: inline-flex; align-items: center; gap: 4px; }
-  .maps-link:hover { background: #c5dff7; }
-  .book-note { font-size: 11px; color: var(--text-hint); width: 100%; margin-top: 2px; }
-  .new-badge { font-size: 10px; background: var(--teal-light); color: var(--teal-text); padding: 2px 7px; border-radius: 8px; font-weight: 600; }
+  .link-btn { font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 10px; display: inline-flex; align-items: center; gap: 4px; transition: opacity 0.1s; }
+  .link-btn:hover { opacity: 0.8; }
+  .link-map { background: var(--blue-light); color: var(--blue-text); }
+  .link-ticket { background: #FEF3C7; color: #92400E; }
+  .link-web { background: var(--gray-light); color: var(--gray-text); }
+  .book-note { font-size: 11px; color: var(--text-hint); width: 100%; margin-top: 3px; }
 
-  /* TIP BOXES */
-  .tip-box { margin: 4px 1.25rem 4px; background: #f0faf5; border-left: 3px solid var(--teal); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 10px 14px; }
-  .tip-box p { font-size: 13px; color: #2d6b52; line-height: 1.5; }
-  .warn-box { margin: 4px 1.25rem 4px; background: #fef6ea; border-left: 3px solid #e8960a; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 10px 14px; }
-  .warn-box p { font-size: 13px; color: var(--amber-text); line-height: 1.5; }
+  .rest-block { background: #fafaf9; border-radius: var(--radius-sm); padding: 10px 12px; margin-top: 6px; border: 1px solid var(--border); }
+  .rest-block-title { font-size: 11px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; }
+  .rest-item { display: flex; align-items: flex-start; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--border); }
+  .rest-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .rest-emoji { font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+  .rest-info { flex: 1; min-width: 0; }
+  .rest-name { font-size: 13px; font-weight: 600; margin-bottom: 1px; }
+  .rest-desc { font-size: 11.5px; color: var(--text-muted); line-height: 1.45; }
+  .rest-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-top: 4px; align-items: center; }
+  .rest-tag { font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 8px; }
+  .tag-local { background: var(--teal-light); color: var(--teal-text); }
+  .tag-intl { background: var(--purple-light); color: var(--purple-text); }
+  .tag-tapas { background: var(--coral-light); color: var(--coral-text); }
+  .tag-seafood { background: var(--blue-light); color: var(--blue-text); }
 
-  /* RESTAURANTS */
-  .city-label { display: inline-block; font-size: 12px; font-weight: 600; padding: 3px 12px; border-radius: 12px; margin-bottom: 1rem; }
+  .tip-box { margin: 0 1.25rem 4px; background: #f0faf5; border-left: 3px solid var(--teal); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 9px 13px; }
+  .tip-box p { font-size: 12.5px; color: #2d6b52; line-height: 1.5; }
+  .warn-box { margin: 0 1.25rem 4px; background: #fef6ea; border-left: 3px solid #e8960a; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 9px 13px; }
+  .warn-box p { font-size: 12.5px; color: var(--amber-text); line-height: 1.5; }
+
+  .city-label { display: inline-block; font-size: 11px; font-weight: 700; padding: 3px 12px; border-radius: 12px; margin-bottom: 1rem; letter-spacing: 0.04em; text-transform: uppercase; }
   .city-bcn { background: var(--teal-light); color: var(--teal-text); }
   .city-salou { background: var(--blue-light); color: var(--blue-text); }
-  .rest-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; margin-bottom: 2rem; }
-  .rest-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; }
-  .rest-name { font-size: 14px; font-weight: 600; margin-bottom: 5px; }
-  .rest-type { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 8px; display: inline-block; margin-bottom: 8px; }
-  .type-local { background: var(--teal-light); color: var(--teal-text); }
-  .type-intl { background: var(--purple-light); color: var(--purple-text); }
-  .type-tapas { background: var(--coral-light); color: var(--coral-text); }
-  .rest-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin-bottom: 8px; }
-  .rest-maps { font-size: 11px; color: var(--blue-text); text-decoration: none; background: var(--blue-light); padding: 3px 9px; border-radius: 8px; display: inline-flex; align-items: center; gap: 4px; }
-  .rest-maps:hover { background: #c5dff7; }
 
-  /* TIPS SECTION */
+  .rest-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin-bottom: 2rem; }
+  .rest-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; }
+  .rest-card-name { font-size: 14px; font-weight: 600; margin-bottom: 5px; }
+  .rest-card-type { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 8px; display: inline-block; margin-bottom: 8px; }
+  .rest-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin-bottom: 8px; }
+
   .summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; margin-bottom: 2rem; }
   .sum-card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem; text-align: center; }
   .sum-num { font-size: 24px; font-weight: 700; margin-bottom: 4px; }
   .sum-label { font-size: 12px; color: var(--text-muted); }
-  .section-heading { font-size: 17px; font-weight: 600; margin-bottom: 1rem; }
-
-  /* MAP ICON SVG inline */
-  .pin-icon { width: 12px; height: 12px; display: inline-block; vertical-align: middle; }
+  .section-heading { font-size: 17px; font-weight: 600; margin-bottom: 1rem; margin-top: 0.25rem; }
 
   @media (max-width: 600px) {
     .hero { padding: 1.5rem 1rem 1rem; }
     .main { padding: 1.25rem 1rem 4rem; }
     .activity { padding: 10px 1rem; }
-    .tip-box, .warn-box { margin: 4px 1rem; }
-    .hero h1 { font-size: 22px; }
+    .tip-box, .warn-box { margin: 0 1rem 4px; }
+    .hero h1 { font-size: 21px; }
+    .rest-block { margin-top: 4px; }
   }
 </style>
 </head>
@@ -121,11 +124,11 @@
     <h1>🇪🇸 Spain Family Holiday 2026</h1>
     <p>Barcelona · Salou · 22 June – 1 July · Family of 4</p>
     <div class="meta-pills">
-      <span class="meta-pill">✈️ H4263 arrives 12:20</span>
-      <span class="meta-pill">🏠 Sants apartment, Barcelona</span>
+      <span class="meta-pill">✈️ H4263 arrives 12:20 on 22 Jun</span>
+      <span class="meta-pill">🏠 Decô Apartments, Sants, Barcelona</span>
       <span class="meta-pill">🚗 Centauro rental from 25 Jun</span>
-      <span class="meta-pill">🏖️ Salou 25 Jun – 1 Jul</span>
-      <span class="meta-pill">✈️ W43180 departs 15:55</span>
+      <span class="meta-pill">🏖️ TuristMar, Salou 25 Jun–1 Jul</span>
+      <span class="meta-pill">✈️ W43180 departs 15:55 on 1 Jul</span>
     </div>
   </div>
 </div>
@@ -133,350 +136,759 @@
 <div class="nav-wrap">
   <div class="nav-inner">
     <button class="tab-btn active" onclick="showTab('itinerary',this)">📅 Itinerary</button>
-    <button class="tab-btn" onclick="showTab('activities',this)">📍 All activities</button>
-    <button class="tab-btn" onclick="showTab('food',this)">🍽️ Where to eat</button>
-    <button class="tab-btn" onclick="showTab('tips',this)">💡 Tips &amp; budget</button>
+    <button class="tab-btn" onclick="showTab('activities',this)">📍 Activities</button>
+    <button class="tab-btn" onclick="showTab('food',this)">🍽️ Restaurants</button>
+    <button class="tab-btn" onclick="showTab('tips',this)">💡 Tips & Budget</button>
   </div>
 </div>
 
 <div class="main">
 
-<!-- ======================== ITINERARY ======================== -->
+<!-- ===== ITINERARY ===== -->
 <div id="itinerary" class="section active">
 
-  <!-- June 22 -->
+  <!-- JUNE 22 -->
   <div class="day-card">
     <div class="day-header">
       <div class="day-badge badge-bcn">22</div>
-      <div class="day-header-text">
-        <div class="day-title">Arrival day – settle in</div>
-        <div class="day-date">Sunday 22 June · Barcelona</div>
-      </div>
+      <div><div class="day-title">Arrival day – settle in & explore Sants</div><div class="day-date">Sunday 22 June · Barcelona</div></div>
     </div>
     <div class="day-body">
       <div class="activity">
         <div class="act-icon icon-transport">✈️</div>
         <div class="act-info">
-          <div class="act-name">Flight H4263 lands 12:20 at El Prat</div>
-          <div class="act-desc">Take the Aerobus (€6.75 adult, €3.50 child) or metro L9 to the city. Head to your Sants apartment to check in.</div>
+          <div class="act-name">Flight H4263 lands ~12:30 at El Prat</div>
+          <div class="act-desc">Clear customs and take a taxi to your apartment (~€35–40, 25 min). Taxis are metered from El Prat — no need to pre-book, the rank is right outside arrivals.</div>
           <div class="act-footer">
-            <span class="price-tag price-low">€10–15 transport for 4</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Barcelona+El+Prat+Airport+Terminal+1" target="_blank">📍 El Prat Airport</a>
+            <span class="price-tag price-low">~€35–40 taxi for 4</span>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Barcelona+El+Prat+Airport+Terminal+1" target="_blank">📍 El Prat T1</a>
+          </div>
+        </div>
+      </div>
+      <div class="activity">
+        <div class="act-icon icon-transport">🏠</div>
+        <div class="act-info">
+          <div class="act-name">Check in – Decô Apartments Barcelona-Sants</div>
+          <div class="act-desc">Carrer de l'Aliga, 28, Sants-Montjuïc. Drop bags, freshen up, get your bearings for the neighbourhood.</div>
+          <div class="act-footer">
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Carrer+de+l'Aliga+28+Sants-Montjuic+Barcelona" target="_blank">📍 Apartment</a>
+            <a class="link-btn link-web" href="https://www.booking.com/hotel/es/barcelona-upartments-aliga-barcelona.ro.html" target="_blank">🌐 Booking.com</a>
           </div>
         </div>
       </div>
       <div class="activity">
         <div class="act-icon icon-fun">🚶</div>
         <div class="act-info">
-          <div class="act-name">Your apartment – Decô Apartments Barcelona-Sants</div>
-          <div class="act-desc">Check in and explore the Sants neighbourhood. Grab dinner at a local bar — look for a menú del día board.</div>
+          <div class="act-name">Afternoon stroll & light shopping in Sants</div>
+          <div class="act-desc">Walk around the neighbourhood, find a local supermarket for essentials (water, snacks, breakfast items). The Mercat de Sants covered market is worth a look if open. Relax before dinner.</div>
           <div class="act-footer">
-            <span class="price-tag price-free">Free stroll</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Carrer+de+l'Aliga+28+Barcelona+Sants" target="_blank">📍 Carrer de l'Aliga 28</a>
+            <span class="price-tag price-free">Free</span>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Mercat+de+Sants+Barcelona" target="_blank">📍 Mercat de Sants</a>
+          </div>
+        </div>
+      </div>
+      <div class="activity">
+        <div class="act-icon icon-food">🍽️</div>
+        <div class="act-info">
+          <div class="act-name">Dinner in Sants</div>
+          <div class="act-desc">First night — keep it easy and close to the apartment. Two great options nearby:</div>
+          <div class="rest-block">
+            <div class="rest-block-title">Recommended for tonight</div>
+            <div class="rest-item">
+              <div class="rest-emoji">🥘</div>
+              <div class="rest-info">
+                <div class="rest-name">La Fonda de la Sants</div>
+                <div class="rest-desc">Classic Catalan restaurant in Sants, loved by locals. Menú del día available evenings, great croquettes and grilled meats. Very affordable and family-friendly.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-local">Catalan</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=La+Fonda+Sants+Barcelona" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
+            <div class="rest-item">
+              <div class="rest-emoji">🍕</div>
+              <div class="rest-info">
+                <div class="rest-name">Benzina Restaurant (Sant Antoni)</div>
+                <div class="rest-desc">Excellent Italian just 10 min away in Sant Antoni. Handmade pasta, great for kids, warm welcoming atmosphere. One of the best Italian spots in Barcelona — the carbonara is outstanding.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-intl">Italian</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=Benzina+Restaurant+Sant+Antoni+Barcelona" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- June 23 -->
+  <!-- JUNE 23 -->
   <div class="day-card">
     <div class="day-header">
       <div class="day-badge badge-bcn">23</div>
-      <div class="day-header-text">
-        <div class="day-title">Gaudí day – Sagrada + Park Güell</div>
-        <div class="day-date">Monday 23 June · Barcelona</div>
-      </div>
+      <div><div class="day-title">Gaudí day – Park Güell · Passeig de Gràcia · Sagrada Família</div><div class="day-date">Monday 23 June · Barcelona</div></div>
     </div>
     <div class="day-body">
-      <div class="activity">
-        <div class="act-icon icon-culture">⛪</div>
-        <div class="act-info">
-          <div class="act-name">Sagrada Família <span class="new-badge">book now!</span></div>
-          <div class="act-desc">Gaudí's unfinished masterpiece. The interior with coloured light through stained glass is breathtaking. Book timed-entry tickets well in advance — they sell out weeks ahead in June. Under-11s enter free.</div>
-          <div class="act-footer">
-            <span class="price-tag price-mid">~€52 for 2 adults (kids free)</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Sagrada+Familia+Barcelona" target="_blank">📍 Map</a>
-          </div>
-          <div class="book-note">🌐 sagradafamilia.org · basic ticket €26/adult · centenary surcharge applies Jun 2026</div>
-        </div>
-      </div>
       <div class="activity">
         <div class="act-icon icon-culture">🌳</div>
         <div class="act-info">
-          <div class="act-name">Park Güell – Monumental Zone <span class="new-badge">book now!</span></div>
-          <div class="act-desc">Gaudí's mosaic wonderland — the dragon staircase, serpentine bench, and gingerbread gatehouses. Kids love the fairytale atmosphere. Book timed entry in advance. The outer free park area is also worth exploring.</div>
+          <div class="act-name">10:00 — Park Güell (Monumental Zone)</div>
+          <div class="act-desc">Book the earliest possible slot — 10:00 is coolest and least crowded. The mosaic dragon staircase, serpentine bench, and gingerbread gatehouses are fantastic for kids. Allow ~2 hours. The free outer park area is also beautiful. Metro L3 to Lesseps or Vallcarca, then a short walk or bus 116.</div>
           <div class="act-footer">
-            <span class="price-tag price-mid">€36 adults + €26 children (7–12) · under 7 free</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Park+Guell+Barcelona" target="_blank">📍 Map</a>
+            <span class="price-tag price-mid">€18/adult · €13 (7–12) · under 7 free</span>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Park+Guell+Barcelona" target="_blank">📍 Map</a>
+            <a class="link-btn link-web" href="https://www.parkguell.barcelona/en/book-tickets" target="_blank">🌐 Book tickets</a>
           </div>
-          <div class="book-note">🌐 parkguell.barcelona</div>
         </div>
       </div>
-      <div class="tip-box"><p><strong>Do these back to back:</strong> metro L5 to Sagrada Família stop in the morning, then bus 116 or a short cab to Park Güell for the afternoon.</p></div>
+      <div class="activity">
+        <div class="act-icon icon-culture">🏛️</div>
+        <div class="act-info">
+          <div class="act-name">12:00 — Passeig de Gràcia stroll & the Block of Discord</div>
+          <div class="act-desc">Take metro L3 from Lesseps to Passeig de Gràcia (15 min). Stroll Barcelona's most elegant boulevard — wide tree-lined pavements, Gaudí's snowflake-patterned tiles underfoot, ornate lamp posts, and the jaw-dropping Modernista buildings. The "Block of Discord" (between Carrer d'Aragó and Carrer del Consell de Cent) has Casa Batlló and Casa Amatller side by side — you don't need to go in, the exteriors alone are spectacular. Kids will notice how alien Gaudí's buildings look compared to everything else. Look up constantly.</div>
+          <div class="act-footer">
+            <span class="price-tag price-free">Free to walk</span>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Passeig+de+Gracia+Barcelona+Block+of+Discord" target="_blank">📍 Block of Discord</a>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Casa+Batllo+Barcelona" target="_blank">📍 Casa Batlló</a>
+          </div>
+        </div>
+      </div>
+      <div class="activity">
+        <div class="act-icon icon-food">🍽️</div>
+        <div class="act-info">
+          <div class="act-name">14:00 — Lunch on/near Passeig de Gràcia</div>
+          <div class="act-desc">Sit-down menú del día lunch. Rest the kids' feet before the afternoon.</div>
+          <div class="rest-block">
+            <div class="rest-block-title">Recommended for lunch</div>
+            <div class="rest-item">
+              <div class="rest-emoji">🥩</div>
+              <div class="rest-info">
+                <div class="rest-name">Cerveceria Catalana</div>
+                <div class="rest-desc">One of Barcelona's most beloved tapas bars, 5 min walk from Passeig de Gràcia. Great patatas bravas, croquettes, pan con tomate. Lively and family-friendly. Arrive early or expect a short queue.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-tapas">Tapas</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=Cerveceria+Catalana+Barcelona+Mallorca" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
+            <div class="rest-item">
+              <div class="rest-emoji">🐟</div>
+              <div class="rest-info">
+                <div class="rest-name">Chao Pescao</div>
+                <div class="rest-desc">Fresh fish and seafood picked from a market-style counter on Passeig de Gràcia. Competitive prices, cozy atmosphere, excellent quality. Great if the kids want to pick their own fish.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-seafood">Seafood</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=Chao+Pescao+Passeig+de+Gracia+Barcelona" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="activity">
+        <div class="act-icon icon-fun">☕</div>
+        <div class="act-info">
+          <div class="act-name">16:00 — Terrace café rest & ice cream</div>
+          <div class="act-desc">Eixample has wide shaded pavements perfect for terrace sitting. Order a coffee/drink, let the kids have ice cream or a cold drink. This is very Spanish and genuinely enjoyable — rest until 17:30 before heading to Sagrada.</div>
+          <div class="act-footer">
+            <span class="price-tag price-low">€5–10</span>
+          </div>
+        </div>
+      </div>
+      <div class="activity">
+        <div class="act-icon icon-food">🍽️</div>
+        <div class="act-info">
+          <div class="act-name">17:30 — Early dinner before Sagrada</div>
+          <div class="act-desc">Eat early (Spanish standards but fine as a tourist) near Eixample or close to Sagrada. Light meal — you've had a big lunch.</div>
+          <div class="rest-block">
+            <div class="rest-block-title">Recommended for early dinner</div>
+            <div class="rest-item">
+              <div class="rest-emoji">🥗</div>
+              <div class="rest-info">
+                <div class="rest-name">Etapes Restaurant</div>
+                <div class="rest-desc">Inexpensive Mediterranean near Passeig de Gràcia. Burrata, suckling pig, scallops, paella — great variety at fair prices, with outdoor seating if lucky. One of the best budget picks near Casa Batlló.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-local">Mediterranean</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=Etapes+Restaurant+Barcelona+Eixample" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
+            <div class="rest-item">
+              <div class="rest-emoji">🍖</div>
+              <div class="rest-info">
+                <div class="rest-name">El Nacional Barcelona</div>
+                <div class="rest-desc">Stunning interior — a gorgeous food market hall with 8 different bar/restaurant concepts under one roof. Kids love the atmosphere. Very family-friendly, something for everyone at every price point.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-tapas">Food hall</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=El+Nacional+Barcelona+Passeig+de+Gracia" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="activity">
+        <div class="act-icon icon-culture">⛪</div>
+        <div class="act-info">
+          <div class="act-name">19:00 — Sagrada Família</div>
+          <div class="act-desc">The evening slot is magical — the western stained glass windows face the setting sun and fill the interior with incredible amber and red light. Arrive 15 min early. Under-11s enter free. Plan ~1.5 hrs inside. Metro L5 to Sagrada Família (5 min from Eixample).</div>
+          <div class="act-footer">
+            <span class="price-tag price-mid">~€52 (2 adults · kids free)</span>
+            <a class="link-btn link-ticket" href="https://drive.google.com/file/d/1rI2w6GayN9q_ulv8-QOmvHG64CMyCKUI/view?usp=drive_link" target="_blank">🎟️ Your tickets</a>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Sagrada+Familia+Barcelona" target="_blank">📍 Map</a>
+          </div>
+          <div class="book-note">🌐 sagradafamilia.org · audio guide included</div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- June 24 -->
+  <!-- JUNE 24 -->
   <div class="day-card">
     <div class="day-header">
       <div class="day-badge badge-bcn">24</div>
-      <div class="day-header-text">
-        <div class="day-title">Port Vell – Aquarium + Zoo</div>
-        <div class="day-date">Tuesday 24 June · Barcelona</div>
-      </div>
+      <div><div class="day-title">Zoo + Aquarium – Parc de la Ciutadella & Port Vell</div><div class="day-date">Tuesday 24 June · Barcelona</div></div>
     </div>
     <div class="day-body">
       <div class="activity">
-        <div class="act-icon icon-fun">🐟</div>
+        <div class="act-icon icon-fun">🦁</div>
         <div class="act-info">
-          <div class="act-name">L'Aquàrium de Barcelona (morning)</div>
-          <div class="act-desc">Europe's largest Mediterranean aquarium with an 80m underwater shark tunnel. 2025 renovation added interactive digital floors, an AR zone, and the Mangrove Area. Book online to skip queues. Opens 10:00.</div>
+          <div class="act-name">10:00 — Barcelona Zoo</div>
+          <div class="act-desc">5,500+ animals inside beautiful Parc de la Ciutadella. 11 themed zones — giraffes, gorillas, Komodo dragons, sea lions, lions. The children's farmyard (goats, ponies, pigs) is a highlight for the 6-year-old. Daily sea lion shows. Bring a packed lunch — there are lovely picnic areas and you're not allowed to feed the animals but eating your own food is absolutely fine. Plan ~3 hrs. Metro L4 to Ciutadella/Vila Olímpica.</div>
           <div class="act-footer">
-            <span class="price-tag price-high">~€80 family (2×€29 adult + 2×€22 child 5–10)</span>
-            <a class="maps-link" href="https://maps.google.com/?q=L'Aquarium+de+Barcelona+Moll+d'Espanya" target="_blank">📍 Map</a>
+            <span class="price-tag price-mid">~€58 family (2×€17.26 adult + 2×€11.65 child)</span>
+            <a class="link-btn link-ticket" href="https://drive.google.com/file/d/1tD1cT7w1zXaTOd1iy2C_mT0xc7r_TZKf/view?usp=drive_link" target="_blank">🎟️ Your tickets</a>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Zoo+de+Barcelona+Parc+de+la+Ciutadella" target="_blank">📍 Map</a>
           </div>
-          <div class="book-note">🌐 aquariumbcn.com · Moll d'Espanya, Port Vell · 2–3 hrs</div>
+          <div class="book-note">🌐 zoobarcelona.cat · Parc de la Ciutadella, 08003 Barcelona</div>
         </div>
       </div>
       <div class="activity">
-        <div class="act-icon icon-fun">🦁</div>
+        <div class="act-icon icon-food">🍽️</div>
         <div class="act-info">
-          <div class="act-name">Barcelona Zoo (afternoon) <span class="new-badge">updated</span></div>
-          <div class="act-desc">A 15-minute walk from the aquarium, inside beautiful Parc de la Ciutadella. 5,500+ animals across 11 zones — giraffes, gorillas, Komodo dragons, sea lions. The children's farmyard (goats, ponies, pigs) is a highlight. Daily sea lion shows. You can bring your own food and use the picnic areas!</div>
-          <div class="act-footer">
-            <span class="price-tag price-mid">~€67 family (2×€21.40 adult + 2×€12.95 child)</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Zoo+Barcelona+Parc+de+la+Ciutadella" target="_blank">📍 Map</a>
+          <div class="act-name">13:00 — Picnic lunch in the park or nearby</div>
+          <div class="act-desc">Use the zoo picnic areas (bring your own food) — saves money and the setting inside the park is lovely. Alternatively, El Born neighbourhood is a 10 min walk with excellent affordable restaurants.</div>
+          <div class="rest-block">
+            <div class="rest-block-title">If eating out near the zoo/El Born</div>
+            <div class="rest-item">
+              <div class="rest-emoji">🍽️</div>
+              <div class="rest-info">
+                <div class="rest-name">Casa Delfín</div>
+                <div class="rest-desc">100-year-old institution serving authentic Catalan cuisine — salt cod, meat stews, local fish. Excellent value menú del día. In El Born, 10 min walk from the zoo entrance.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-local">Catalan</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=Casa+Delfin+El+Born+Barcelona" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
+            <div class="rest-item">
+              <div class="rest-emoji">🍕</div>
+              <div class="rest-info">
+                <div class="rest-name">The Bronzo</div>
+                <div class="rest-desc">Excellent Italian in El Born right next to the park and zoo. Family-focused with ~€15/person, handmade pasta, perfect for when the kids want something familiar. Right next to Parc de la Ciutadella.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-intl">Italian</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=The+Bronzo+El+Born+Barcelona" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="book-note">🌐 zoobarcelona.cat · buy online for small discount · 2–4 hrs</div>
         </div>
       </div>
-      <div class="tip-box"><p><strong>Great pairing:</strong> Aquarium and Zoo are neighbours — both in the Port Vell/Ciutadella area. Do the aquarium first (cooler inside), then walk 15 min to the zoo. Bring a packed lunch for the zoo's picnic areas to save money.</p></div>
+      <div class="activity">
+        <div class="act-icon icon-fun">🐟</div>
+        <div class="act-info">
+          <div class="act-name">15:30 — L'Aquàrium de Barcelona</div>
+          <div class="act-desc">A 15 min walk from the zoo through El Born to Port Vell. Europe's largest Mediterranean aquarium — the 80m underwater shark tunnel is unmissable. 2025 renovation added interactive digital floors, AR zones, and a new Mangrove Area. Book online to skip queues. Plan ~2 hrs. Entry at 15:30 means you're done by ~17:30.</div>
+          <div class="act-footer">
+            <span class="price-tag price-high">~€80 family (2×€29 adult + 2×€22 child 5–10)</span>
+            <a class="link-btn link-ticket" href="https://drive.google.com/file/d/1X_DUnlh4kZIt-hUqiYwEmn2LEwHm1JbQ/view?usp=drive_link" target="_blank">🎟️ Your tickets</a>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Aquarium+Barcelona+Moll+d'Espanya+Port+Vell" target="_blank">📍 Map</a>
+          </div>
+          <div class="book-note">🌐 aquariumbcn.com · Moll d'Espanya, Port Vell</div>
+        </div>
+      </div>
+      <div class="activity">
+        <div class="act-icon icon-food">🍽️</div>
+        <div class="act-info">
+          <div class="act-name">18:00 — Dinner in Barceloneta or El Born</div>
+          <div class="act-desc">You're right between Barceloneta beach and El Born — both have great options. Stroll to Barceloneta for a chiringuito (beach bar) or stay in El Born for something more local.</div>
+          <div class="rest-block">
+            <div class="rest-block-title">Recommended for dinner</div>
+            <div class="rest-item">
+              <div class="rest-emoji">🦐</div>
+              <div class="rest-info">
+                <div class="rest-name">La Cova Fumada</div>
+                <div class="rest-desc">Legendary Barceloneta local gem — birthplace of the Bombas (fried meatballs). Cash only, no reservations, arrive early. Very cheap, very authentic, one of Barcelona's greatest hidden spots.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-seafood">Seafood</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=La+Cova+Fumada+Barceloneta+Barcelona" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
+            <div class="rest-item">
+              <div class="rest-emoji">🍽️</div>
+              <div class="rest-info">
+                <div class="rest-name">Bar del Pla (El Born)</div>
+                <div class="rest-desc">Relaxed tapas bar in El Born, great vermouth and montaditos. Family-friendly and very affordable. One of the most consistently praised tapas spots in the city.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-tapas">Tapas</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=Bar+del+Pla+El+Born+Barcelona" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- June 25 -->
+  <!-- JUNE 25 -->
   <div class="day-card">
     <div class="day-header">
       <div class="day-badge badge-bcn">25</div>
-      <div class="day-header-text">
-        <div class="day-title">Tibidabo + drive to Salou <span class="new-badge">new</span></div>
-        <div class="day-date">Wednesday 25 June · Barcelona → Salou</div>
-      </div>
+      <div><div class="day-title">Tibidabo + drive to Salou</div><div class="day-date">Wednesday 25 June · Barcelona → Salou</div></div>
     </div>
     <div class="day-body">
       <div class="activity">
         <div class="act-icon icon-transport">🚗</div>
         <div class="act-info">
-          <div class="act-name">Morning: check out + pick up Centauro rental car at El Prat</div>
-          <div class="act-desc">Check out of the Sants apartment with all luggage, take public transport to El Prat to collect the Centauro car. Load luggage in the boot. Drive ~30 min to Tibidabo — park at BSM Sant Genís (opens 9:30, cheaper), then take the TibiBus T2B up the mountain. Avoids driving the narrow mountain road with a loaded car.</div>
+          <div class="act-name">Morning — check out & pick up Centauro car at El Prat</div>
+          <div class="act-desc">Check out of the apartment with all luggage. Take public transport or taxi to El Prat to collect the Centauro rental car. Load all luggage in the boot. Drive ~30 min to Tibidabo — park at BSM Sant Genís (opens 9:30, cheaper than summit parking), then take the TibiBus T2B up the mountain. Avoids driving the narrow summit road with a fully loaded car.</div>
           <div class="act-footer">
-            <a class="maps-link" href="https://maps.google.com/?q=Centauro+Rent+a+Car+Barcelona+Airport" target="_blank">📍 Centauro at El Prat</a>
-            <a class="maps-link" href="https://maps.google.com/?q=Aparcament+BSM+Sant+Genis+Vall+d'Hebron+Barcelona" target="_blank">📍 BSM Sant Genís Parking</a>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Centauro+Rent+a+Car+Barcelona+Airport+El+Prat" target="_blank">📍 Centauro at El Prat</a>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Aparcament+BSM+Vall+d'Hebron+Barcelona" target="_blank">📍 BSM Sant Genís Parking</a>
           </div>
         </div>
       </div>
       <div class="activity">
         <div class="act-icon icon-fun">🎡</div>
         <div class="act-info">
-          <div class="act-name">Tibidabo Amusement Park (late morning – afternoon)</div>
-          <div class="act-desc">One of the world's oldest amusement parks at 512m above Barcelona, with stunning panoramic views. 25+ rides for all ages — vintage carousels, the 1920s Avió plane, the Giradabo Ferris wheel, rollercoaster, and the spooky Espai 666 (age 8+). The Plaça dels Somnis zone has puppet theatre and 4D cinema — ideal for the 6-year-old. Plan 4–5 hours. Funicular (Cuca de Llum) included in ticket.</div>
+          <div class="act-name">11:00 — Tibidabo Amusement Park</div>
+          <div class="act-desc">One of the world's oldest amusement parks at 512m above Barcelona with jaw-dropping panoramic views. 25+ rides for all ages — the vintage 1920s Avió plane ride that "flies" over the city, the Giradabo Ferris wheel, rollercoaster, Espai 666 haunted house (age 8+), and the Plaça dels Somnis zone with puppet theatre and 4D cinema (ideal for the 6-year-old). Funicular (Cuca de Llum) included in ticket. Plan 4–5 hrs. Open Wed–Sun from 22 June.</div>
           <div class="act-footer">
             <span class="price-tag price-high">~€84 (2×€35 adult + 2×€14 child under 120cm)</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Tibidabo+Amusement+Park+Barcelona" target="_blank">📍 Map</a>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Tibidabo+Amusement+Park+Barcelona" target="_blank">📍 Map</a>
+            <a class="link-btn link-web" href="https://www.tibidabo.cat/en/buy-tickets" target="_blank">🌐 Book tickets</a>
           </div>
-          <div class="book-note">🌐 tibidabo.cat · opens 11:00 Wed–Sun from 22 June · verify schedule before going</div>
+          <div class="book-note">⚠️ Pricing by height not age: under 120cm = €14, over 120cm = €35. Confirm schedule on tibidabo.cat before going.</div>
         </div>
       </div>
-      <div class="warn-box"><p><strong>⚠️ Check heights:</strong> Child pricing (€14) applies to children under 120cm. Over 120cm pays adult price (€35). Many rides also require minimum 120cm height.</p></div>
+      <div class="activity">
+        <div class="act-icon icon-food">🍽️</div>
+        <div class="act-info">
+          <div class="act-name">Lunch at Tibidabo or nearby</div>
+          <div class="act-desc">There are restaurants and snack bars inside the park but they're expensive. Best option: bring a packed lunch from the apartment before you leave, or eat at a café near the BSM parking before taking the TibiBus up.</div>
+          <div class="rest-block">
+            <div class="rest-block-title">Nearby to BSM parking / Vall d'Hebron area</div>
+            <div class="rest-item">
+              <div class="rest-emoji">🍽️</div>
+              <div class="rest-info">
+                <div class="rest-name">Bar-Restaurant Can Lluís (Sarrià area)</div>
+                <div class="rest-desc">Classic local bar-restaurant in the quiet Sarrià neighbourhood near Tibidabo. Traditional Catalan, excellent menú del día, very affordable. Great for a proper lunch before the park.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-local">Catalan</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=Restaurant+Sarria+Barcelona+near+Tibidabo" target="_blank">📍 Sarrià area</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="activity">
         <div class="act-icon icon-transport">🛣️</div>
         <div class="act-info">
-          <div class="act-name">Evening: drive to Salou</div>
-          <div class="act-desc">Leave Tibidabo by 17:00–17:30. Drive 1hr south on the AP-7 motorway to Salou. Check in to your apartment on Carrer de la Verge del Pilar — arrive early evening with time for a beach stroll and dinner.</div>
+          <div class="act-name">17:00–18:00 — Drive to Salou</div>
+          <div class="act-desc">Leave Tibidabo by 17:00–17:30. Drive south on the AP-7 motorway (~1hr, ~110km). Check in to your apartment on Carrer de la Verge del Pilar — arriving early evening with time for a beach stroll before dinner.</div>
           <div class="act-footer">
-            <span class="price-tag price-low">~1hr drive · ~€8–12 toll</span>
-            <a class="maps-link" href="https://maps.google.com/?q=16+Carrer+de+la+Verge+del+Pilar+Salou+43840" target="_blank">📍 Your Salou apartment</a>
+            <span class="price-tag price-low">~1hr · ~€8–12 toll</span>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=16+Carrer+de+la+Verge+del+Pilar+Salou+43840" target="_blank">📍 Your Salou apartment</a>
+            <a class="link-btn link-web" href="https://www.booking.com/hotel/es/salou-apartamento-a-50m-de-la-playa.ro.html" target="_blank">🌐 Booking.com</a>
+          </div>
+        </div>
+      </div>
+      <div class="activity">
+        <div class="act-icon icon-food">🍽️</div>
+        <div class="act-info">
+          <div class="act-name">Evening — first dinner in Salou</div>
+          <div class="act-desc">Arrive ~18:30–19:00, quick beach stroll to stretch legs, then dinner.</div>
+          <div class="rest-block">
+            <div class="rest-block-title">Recommended for first night in Salou</div>
+            <div class="rest-item">
+              <div class="rest-emoji">🥘</div>
+              <div class="rest-info">
+                <div class="rest-name">La Taverna</div>
+                <div class="rest-desc">Top-rated family restaurant in Salou (9.7 on TheFork). Warm, welcoming, good paella and grilled meats at very reasonable prices. Perfect first-night dinner, easy walk from your apartment.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-local">Spanish</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=La+Taverna+Restaurant+Salou" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
+            <div class="rest-item">
+              <div class="rest-emoji">🐟</div>
+              <div class="rest-info">
+                <div class="rest-name">Catalunya 92</div>
+                <div class="rest-desc">Family-friendly seafood and tapas. Garlic prawns, patatas bravas, calamari. Good value menú del día. One of the most consistently praised restaurants in Salou.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-seafood">Seafood · Tapas</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=Catalunya+92+Restaurant+Salou" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- June 26 -->
+  <!-- JUNE 26 -->
   <div class="day-card">
     <div class="day-header">
       <div class="day-badge badge-salou">26</div>
-      <div class="day-header-text">
-        <div class="day-title">PortAventura + Ferrari Land</div>
-        <div class="day-date">Thursday 26 June · Salou</div>
+      <div><div class="day-title">Beach day</div><div class="day-date">Thursday 26 June · Salou</div></div>
+    </div>
+    <div class="day-body">
+      <div class="activity">
+        <div class="act-icon icon-beach">☀️</div>
+        <div class="act-info">
+          <div class="act-name">All day — Playa Salou & Playa de Ponent</div>
+          <div class="act-desc">First full beach day! Your apartment is 50m from the sea. Salou's Blue Flag beaches have calm, shallow water perfect for kids. Playa de Ponent (just west) is slightly calmer and less crowded than the main beach. Pedalos available on the beach for ~€8–12/30 min — great fun for the kids. The Passeig de les Palmeres promenade is lovely for an evening stroll with ice cream.</div>
+          <div class="act-footer">
+            <span class="price-tag price-free">Free</span>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Playa+de+Salou+Costa+Dorada" target="_blank">📍 Playa Salou</a>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Playa+de+Ponent+Salou" target="_blank">📍 Playa de Ponent</a>
+          </div>
+        </div>
       </div>
+      <div class="activity">
+        <div class="act-icon icon-food">🍽️</div>
+        <div class="act-info">
+          <div class="act-name">Lunch & dinner recommendations</div>
+          <div class="rest-block">
+            <div class="rest-block-title">Lunch</div>
+            <div class="rest-item">
+              <div class="rest-emoji">🥗</div>
+              <div class="rest-info">
+                <div class="rest-name">Amore Beach Club</div>
+                <div class="rest-desc">Beachfront spot with a boho vibe. Bowls, burritos, burgers, Caesar salads — great variety including options for picky kids. Very popular with families. Relaxed atmosphere.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-intl">International</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=Amore+Beach+Club+Salou" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rest-block">
+            <div class="rest-block-title">Dinner</div>
+            <div class="rest-item">
+              <div class="rest-emoji">🍣</div>
+              <div class="rest-info">
+                <div class="rest-name">Panorama Nikkei Bar & Mediterranean Tapas</div>
+                <div class="rest-desc">Highly rated (4.7/5) fusion of Nikkei (Japanese-Peruvian) and Mediterranean. Terrace seating, gyozas, ceviche, maki rolls, duck, scallops. Attentive service. Excellent for adults; varied enough menu for kids too.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-intl">Asian · Mediterranean</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=Panorama+Nikkei+Bar+Salou" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JUNE 27 -->
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-badge badge-salou">27</div>
+      <div><div class="day-title">PortAventura World + Ferrari Land</div><div class="day-date">Friday 27 June · Salou</div></div>
     </div>
     <div class="day-body">
       <div class="activity">
         <div class="act-icon icon-fun">🎢</div>
         <div class="act-info">
-          <div class="act-name">PortAventura World + Ferrari Land</div>
-          <div class="act-desc">Spain's top theme park with 40+ rides across 6 themed worlds. Ferrari Land has Europe's tallest vertical accelerator. SésamoAventura is a dedicated zone for smaller kids (6-year-old will love it). Buy the "1 day, 2 parks" ticket online.</div>
+          <div class="act-name">Full day — PortAventura + Ferrari Land</div>
+          <div class="act-desc">Spain's top theme park with 40+ rides across 6 themed worlds. Ferrari Land has Europe's tallest vertical accelerator (Red Force). SésamoAventura is a dedicated Sesame Street zone perfect for the 6-year-old. Arrive at gate opening for minimum queues on the big rides. Pre-booked parking included — drive the 2km from your apartment, arrive before 10:00.</div>
           <div class="act-footer">
-            <span class="price-tag price-high">~€160–200 for family of 4</span>
-            <a class="maps-link" href="https://maps.google.com/?q=PortAventura+World+Salou" target="_blank">📍 Map</a>
+            <span class="price-tag price-high">~€160–200 family of 4</span>
+            <a class="link-btn link-ticket" href="https://drive.google.com/file/d/1QkO8iie2bdLFypIyPHbAsByYhaxNO49u/view?usp=drive_link" target="_blank">🎟️ Your tickets</a>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=PortAventura+World+Salou+Spain" target="_blank">📍 Map</a>
           </div>
-          <div class="book-note">🌐 portaventuraworld.com · just 2km from your apartment · check for DAYFREE promo code</div>
+          <div class="book-note">🌐 portaventuraworld.com · 2km from your apartment · parking pre-booked at €15</div>
         </div>
       </div>
-      <div class="tip-box"><p><strong>Money saver:</strong> Check portaventuraworld.com for active promo codes — the DAYFREE code was running until late June 2026. Buying online is always cheaper than the gate price.</p></div>
+      <div class="tip-box"><p><strong>Strategy:</strong> Hit Dragon Khan, Shambhala, and Red Force (Ferrari Land) in the first 2 hours before queues build. Midday: SésamoAventura and shows. After 17:00 queues drop again for the big rides.</p></div>
+      <div class="activity">
+        <div class="act-icon icon-food">🍽️</div>
+        <div class="act-info">
+          <div class="act-name">Dinner after the park</div>
+          <div class="rest-block">
+            <div class="rest-block-title">Recommended for dinner (tired kids after a big day!)</div>
+            <div class="rest-item">
+              <div class="rest-emoji">🍕</div>
+              <div class="rest-info">
+                <div class="rest-name">Cook and Travel</div>
+                <div class="rest-desc">Mediterranean fusion with terrace seating. Highly rated (9.5 TheFork), creative menu but approachable for kids. One of the best all-round restaurants in Salou — good food without breaking the budget.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-intl">Mediterranean</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=Cook+and+Travel+Restaurant+Salou" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
+            <div class="rest-item">
+              <div class="rest-emoji">🍛</div>
+              <div class="rest-info">
+                <div class="rest-name">Chai Indian Cuisine</div>
+                <div class="rest-desc">5 min drive in nearby Vilaseca. Excellent fallback if kids want something very familiar after a long day. Authentic Indian at fair prices, popular with families.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-intl">Indian</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=Chai+Indian+Cuisine+Vilaseca+Salou" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- June 27 -->
+  <!-- JUNE 28 -->
   <div class="day-card">
     <div class="day-header">
-      <div class="day-badge badge-salou">27</div>
-      <div class="day-header-text">
-        <div class="day-title">Caribe Aquatic Park</div>
-        <div class="day-date">Friday 27 June · Salou</div>
+      <div class="day-badge badge-salou">28</div>
+      <div><div class="day-title">Beach day & recovery</div><div class="day-date">Saturday 28 June · Salou</div></div>
+    </div>
+    <div class="day-body">
+      <div class="activity">
+        <div class="act-icon icon-beach">☀️</div>
+        <div class="act-info">
+          <div class="act-name">All day — beach & promenade</div>
+          <div class="act-desc">Recovery day after the theme park. Morning swim, build sandcastles, relax. In the evening walk the Passeig de les Palmeres promenade for ice cream and a stroll. Playa Llarga (Long Beach) to the north of Salou is more peaceful if the main beach is crowded on a Saturday.</div>
+          <div class="act-footer">
+            <span class="price-tag price-free">Free</span>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Platja+Llarga+Salou" target="_blank">📍 Platja Llarga</a>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Passeig+de+les+Palmeres+Salou" target="_blank">📍 Promenade</a>
+          </div>
+        </div>
       </div>
+      <div class="activity">
+        <div class="act-icon icon-food">🍽️</div>
+        <div class="act-info">
+          <div class="act-name">Lunch & dinner recommendations</div>
+          <div class="rest-block">
+            <div class="rest-block-title">Lunch</div>
+            <div class="rest-item">
+              <div class="rest-emoji">🐟</div>
+              <div class="rest-info">
+                <div class="rest-name">O Mar Restaurant</div>
+                <div class="rest-desc">Excellent fresh fish and seafood, consistently praised as among the best in Salou. Great sharing platters and paella. Family-friendly, very fairly priced for the quality.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-seafood">Seafood</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=O+Mar+Restaurant+Salou" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rest-block">
+            <div class="rest-block-title">Dinner</div>
+            <div class="rest-item">
+              <div class="rest-emoji">🥘</div>
+              <div class="rest-info">
+                <div class="rest-name">El Pirata</div>
+                <div class="rest-desc">Fun, relaxed seafood restaurant popular with families in Salou. Great tapas, generous portions. Kids tend to love the pirate-themed vibe. Good value for money.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-seafood">Seafood</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=El+Pirata+Restaurant+Salou" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JUNE 29 -->
+  <div class="day-card">
+    <div class="day-header">
+      <div class="day-badge badge-salou">29</div>
+      <div><div class="day-title">Caribe Aquatic Park</div><div class="day-date">Sunday 29 June · Salou</div></div>
     </div>
     <div class="day-body">
       <div class="activity">
         <div class="act-icon icon-beach">💧</div>
         <div class="act-info">
-          <div class="act-name">Caribe Aquatic Park – all day splash</div>
-          <div class="act-desc">Caribbean-themed water park with 17 rides, pirate ship area for kids, wave pools, lazy river, and Europe's tallest freefall slide (31m). Brand new Coral Bay zone opening summer 2026. Bring your own packed lunch — food inside is expensive.</div>
+          <div class="act-name">Full day — Caribe Aquatic Park</div>
+          <div class="act-desc">Caribbean-themed water park with 17 rides, pirate ship area for kids, wave pool, lazy river, and Europe's tallest freefall slide (31m). Brand new Coral Bay zone opening summer 2026. Drive 2km from your apartment — parking on-site. Bring your own packed lunch and water bottles — food inside is very expensive. Arrive at opening for the best slides before crowds build. Factor 50 sunscreen essential.</div>
           <div class="act-footer">
-            <span class="price-tag price-mid">~€130 for family of 4 (~€33/person)</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Caribe+Aquatic+Park+PortAventura+Salou" target="_blank">📍 Map</a>
+            <span class="price-tag price-mid">~€130 family (~€33/person)</span>
+            <a class="link-btn link-ticket" href="https://drive.google.com/file/d/1S5__IANftnft__LsTtshfVQVDmMor7xs/view?usp=drive_link" target="_blank">🎟️ Your tickets</a>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Caribe+Aquatic+Park+PortAventura+Salou" target="_blank">📍 Map</a>
           </div>
-          <div class="book-note">🌐 portaventuraworld.com or GetYourGuide · lockers €6/day</div>
+          <div class="book-note">🌐 portaventuraworld.com · lockers ~€6/day · towels available for hire</div>
         </div>
       </div>
-      <div class="tip-box"><p><strong>Insider tip:</strong> Pack a picnic lunch and refillable water bottles. Sunscreen factor 50 is essential. You can re-enter the park if you leave for lunch.</p></div>
-    </div>
-  </div>
-
-  <!-- June 28 -->
-  <div class="day-card">
-    <div class="day-header">
-      <div class="day-badge badge-salou">28</div>
-      <div class="day-header-text">
-        <div class="day-title">Beach &amp; relax day</div>
-        <div class="day-date">Saturday 28 June · Salou</div>
-      </div>
-    </div>
-    <div class="day-body">
+      <div class="tip-box"><p><strong>Pack smart:</strong> Rucksack with packed lunch, refillable water bottles, sunscreen, and a change of dry clothes for after. You can leave the locker and re-enter the park during the day.</p></div>
       <div class="activity">
-        <div class="act-icon icon-beach">☀️</div>
+        <div class="act-icon icon-food">🍽️</div>
         <div class="act-info">
-          <div class="act-name">Playa Salou / Playa de Ponent</div>
-          <div class="act-desc">Pure beach day — swimming, sandcastles, and relaxing. Salou's beaches are Blue Flag with calm, shallow water perfect for kids. Your apartment is only 50m away!</div>
-          <div class="act-footer">
-            <span class="price-tag price-free">Free</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Playa+de+Salou+Costa+Dorada" target="_blank">📍 Playa Salou</a>
-            <a class="maps-link" href="https://maps.google.com/?q=Playa+de+Ponent+Salou" target="_blank">📍 Playa de Ponent</a>
-          </div>
-        </div>
-      </div>
-      <div class="activity">
-        <div class="act-icon icon-fun">🚤</div>
-        <div class="act-info">
-          <div class="act-name">Pedalos &amp; beach activities</div>
-          <div class="act-desc">Pedalo rentals on the beach (~€8–12 for 30 min). Beach volleyball courts and playgrounds along the Passeig de les Palmeres promenade.</div>
-          <div class="act-footer">
-            <span class="price-tag price-low">€8–12 optional</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Passeig+de+les+Palmeres+Salou" target="_blank">📍 Promenade</a>
+          <div class="act-name">Dinner after the water park</div>
+          <div class="rest-block">
+            <div class="rest-block-title">Recommended for dinner</div>
+            <div class="rest-item">
+              <div class="rest-emoji">🥘</div>
+              <div class="rest-info">
+                <div class="rest-name">La Morera</div>
+                <div class="rest-desc">Excellent tapas restaurant in Salou, highly recommended by regulars. Octopus, bravas, paella — consistently high quality and great service. One of the hidden gems of Salou.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-tapas">Tapas</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=La+Morera+Restaurant+Salou" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
+            <div class="rest-item">
+              <div class="rest-emoji">🍕</div>
+              <div class="rest-info">
+                <div class="rest-name">El Cafè de la Tertúlia</div>
+                <div class="rest-desc">Popular local café-restaurant, great for a relaxed dinner. Approachable menu, good prices, terrace seating. Works well when everyone's tired from a water park day.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-local">Spanish</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=El+Cafe+de+la+Tertúlia+Salou" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- June 29 -->
-  <div class="day-card">
-    <div class="day-header">
-      <div class="day-badge badge-salou">29</div>
-      <div class="day-header-text">
-        <div class="day-title">Cambrils day trip</div>
-        <div class="day-date">Sunday 29 June · Salou area</div>
-      </div>
-    </div>
-    <div class="day-body">
-      <div class="activity">
-        <div class="act-icon icon-culture">⚓</div>
-        <div class="act-info">
-          <div class="act-name">Cambrils harbour &amp; old town</div>
-          <div class="act-desc">Just 7km south of Salou by car. A charming fishing port with a beautiful harbour, medieval watchtower, and some of the best fresh seafood restaurants on the Costa Dorada. Perfect for a relaxed morning stroll and long lunch.</div>
-          <div class="act-footer">
-            <span class="price-tag price-free">Free to visit</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Port+de+Cambrils+Tarragona" target="_blank">📍 Cambrils Harbour</a>
-          </div>
-        </div>
-      </div>
-      <div class="activity">
-        <div class="act-icon icon-beach">🌊</div>
-        <div class="act-info">
-          <div class="act-name">Afternoon beach back in Salou</div>
-          <div class="act-desc">Return for an afternoon swim. The Las Américas promenade has nice cafes and ice cream for the kids in the evening.</div>
-          <div class="act-footer">
-            <span class="price-tag price-free">Free</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Las+Americas+Salou+Promenade" target="_blank">📍 Las Américas promenade</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- June 30 -->
+  <!-- JUNE 30 -->
   <div class="day-card">
     <div class="day-header">
       <div class="day-badge badge-salou">30</div>
-      <div class="day-header-text">
-        <div class="day-title">Final beach day + farewell dinner</div>
-        <div class="day-date">Monday 30 June · Salou</div>
-      </div>
+      <div><div class="day-title">Last beach day & farewell dinner</div><div class="day-date">Monday 30 June · Salou</div></div>
     </div>
     <div class="day-body">
       <div class="activity">
         <div class="act-icon icon-beach">☀️</div>
         <div class="act-info">
-          <div class="act-name">Last Mediterranean swim</div>
-          <div class="act-desc">Spend the morning at the beach — last chance to enjoy the Mediterranean! Pack early in the afternoon to prepare for the 6am start the next day.</div>
-          <div class="act-footer"><span class="price-tag price-free">Free</span></div>
+          <div class="act-name">All day — final Mediterranean swim</div>
+          <div class="act-desc">Last chance to enjoy the sea! Morning and afternoon on the beach. Cap Salou (the rocky cove headland south of the main beach) is worth a short drive for a more scenic, quieter swim. The promenade is lovely for a final sunset walk with ice cream.</div>
+          <div class="act-footer">
+            <span class="price-tag price-free">Free</span>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Cap+Salou+Cala+Crancs" target="_blank">📍 Cap Salou coves</a>
+          </div>
         </div>
       </div>
       <div class="activity">
-        <div class="act-icon icon-food">🥘</div>
+        <div class="act-icon icon-food">🍽️</div>
         <div class="act-info">
-          <div class="act-name">Farewell paella dinner</div>
-          <div class="act-desc">Treat the family to a proper seafood paella at a local restaurant. Catalunya 92 or O Mar are both excellent, affordable, and family-friendly.</div>
-          <div class="act-footer">
-            <span class="price-tag price-mid">~€40–50 for 4 with drinks</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Catalunya+92+Restaurant+Salou" target="_blank">📍 Catalunya 92</a>
+          <div class="act-name">Lunch & farewell dinner</div>
+          <div class="rest-block">
+            <div class="rest-block-title">Lunch</div>
+            <div class="rest-item">
+              <div class="rest-emoji">🥗</div>
+              <div class="rest-info">
+                <div class="rest-name">Amore Beach Club</div>
+                <div class="rest-desc">Casual beachfront lunch — relaxed, kids-friendly, great bowls and light meals. Walk from the beach.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-intl">International</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=Amore+Beach+Club+Salou" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="rest-block">
+            <div class="rest-block-title">Farewell dinner — celebrate the holiday!</div>
+            <div class="rest-item">
+              <div class="rest-emoji">🥘</div>
+              <div class="rest-info">
+                <div class="rest-name">O Mar Restaurant — seafood paella</div>
+                <div class="rest-desc">Perfect farewell meal — a proper Costa Dorada seafood paella. Order the rice dishes in advance if possible (paella takes 20–30 min to cook). Great value, genuinely delicious, a fitting final dinner.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-seafood">Seafood · Paella</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=O+Mar+Restaurant+Salou" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- July 1 -->
+  <!-- JULY 1 -->
   <div class="day-card">
     <div class="day-header">
       <div class="day-badge badge-salou">1</div>
-      <div class="day-header-text">
-        <div class="day-title">Departure day</div>
-        <div class="day-date">Tuesday 1 July · Salou → El Prat</div>
-      </div>
+      <div><div class="day-title">Departure — Cambrils lunch & flight home</div><div class="day-date">Tuesday 1 July · Salou → Cambrils → El Prat</div></div>
     </div>
     <div class="day-body">
       <div class="activity">
+        <div class="act-icon icon-transport">🏠</div>
+        <div class="act-info">
+          <div class="act-name">Morning — check out of TuristMar</div>
+          <div class="act-desc">Pack and check out. Load the car with all luggage. You have plenty of time before your 15:55 flight.</div>
+          <div class="act-footer">
+            <a class="link-btn link-map" href="https://maps.google.com/?q=16+Carrer+de+la+Verge+del+Pilar+Salou+43840" target="_blank">📍 TuristMar apartment</a>
+          </div>
+        </div>
+      </div>
+      <div class="activity">
+        <div class="act-icon icon-culture">⚓</div>
+        <div class="act-info">
+          <div class="act-name">10:00 — Cambrils harbour stroll</div>
+          <div class="act-desc">Drive 7km south to Cambrils (15 min). Stroll the beautiful fishing harbour, walk the old town, see the medieval watchtower. A charming and relaxed final morning. The harbour area is very photogenic — great family photos to end the trip.</div>
+          <div class="act-footer">
+            <span class="price-tag price-free">Free</span>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Port+de+Cambrils+Tarragona" target="_blank">📍 Cambrils Harbour</a>
+          </div>
+        </div>
+      </div>
+      <div class="activity">
+        <div class="act-icon icon-food">🍽️</div>
+        <div class="act-info">
+          <div class="act-name">12:00 — Farewell lunch in Cambrils</div>
+          <div class="act-desc">Cambrils is known for some of the best seafood restaurants on the Costa Dorada. A lovely final meal before the airport.</div>
+          <div class="rest-block">
+            <div class="rest-block-title">Recommended for final lunch</div>
+            <div class="rest-item">
+              <div class="rest-emoji">🐟</div>
+              <div class="rest-info">
+                <div class="rest-name">El Pòsit</div>
+                <div class="rest-desc">Widely considered one of the best restaurants in Cambrils — fresh seafood, beautiful harbour-side atmosphere, seafood sharing platters and excellent paella. Book in advance during summer. "Easily one of the best in town."</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-seafood">Seafood</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=El+Posit+Cambrils+harbour" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
+            <div class="rest-item">
+              <div class="rest-emoji">🍽️</div>
+              <div class="rest-info">
+                <div class="rest-name">Restaurant Montserrat</div>
+                <div class="rest-desc">Away from the tourist strip, authentic and charming. Specialises in simple fresh seafood dishes. Set menus at reasonable prices. Very good value for Cambrils.</div>
+                <div class="rest-tags">
+                  <span class="rest-tag tag-local">Catalan Seafood</span>
+                  <a class="link-btn link-map" href="https://maps.google.com/?q=Restaurant+Montserrat+Cambrils" target="_blank">📍 Map</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="activity">
         <div class="act-icon icon-transport">🛣️</div>
         <div class="act-info">
-          <div class="act-name">Drive to El Prat, return Centauro car</div>
-          <div class="act-desc">Flight W43180 departs 15:55. Leave Salou by 12:30 at the latest. Drive 1hr north on AP-7. Return the car at the Centauro desk — allow 45–60 min for car return + check-in + security.</div>
+          <div class="act-name">13:30 — Drive to El Prat & return Centauro car</div>
+          <div class="act-desc">Flight W43180 departs 15:55. Leave Cambrils by 13:30 at the latest (1hr drive). Return the car at the Centauro desk at El Prat. Allow 45–60 min for car return + check-in + security + walking to gate. Comfortable timing.</div>
           <div class="act-footer">
             <span class="price-tag price-low">~1hr drive · ~€8–12 toll</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Centauro+Rent+a+Car+Barcelona+Airport" target="_blank">📍 Centauro at El Prat</a>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Centauro+Rent+a+Car+Barcelona+El+Prat+Airport" target="_blank">📍 Centauro at El Prat</a>
           </div>
+          <div class="book-note">✈️ Flight W43180 · departs 15:55 · arrive at airport by 14:30 minimum</div>
         </div>
       </div>
     </div>
@@ -484,81 +896,81 @@
 
 </div><!-- end itinerary -->
 
-<!-- ======================== ACTIVITIES ======================== -->
+<!-- ===== ACTIVITIES ===== -->
 <div id="activities" class="section">
-
   <div class="city-label city-bcn">Barcelona (22–25 June)</div>
   <div class="day-card" style="margin-bottom:1.5rem">
     <div class="day-body">
       <div class="activity">
-        <div class="act-icon icon-culture">⛪</div>
-        <div class="act-info">
-          <div class="act-name">Sagrada Família</div>
-          <div class="act-desc">Gaudí's epic basilica, under construction since 1882. Stunning interior light through stained glass. Book weeks in advance for June slots. Under-11s enter free.</div>
-          <div class="act-footer">
-            <span class="price-tag price-mid">€26/adult · children under 11 free</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Sagrada+Familia+Barcelona" target="_blank">📍 Map</a>
-          </div>
-          <div class="book-note">🌐 sagradafamilia.org · must book in advance</div>
-        </div>
-      </div>
-      <div class="activity">
         <div class="act-icon icon-culture">🌳</div>
         <div class="act-info">
           <div class="act-name">Park Güell – Monumental Zone</div>
-          <div class="act-desc">Mosaic dragon staircase, serpentine bench, panoramic views. Kids love the fairytale atmosphere. Book timed entry in advance. Free outer park area also worth exploring.</div>
+          <div class="act-desc">Gaudí's mosaic wonderland — the dragon staircase, serpentine bench, and gingerbread gatehouses. Kids love the fairytale atmosphere. Book timed entry in advance. Free outer park area is also worth exploring.</div>
           <div class="act-footer">
             <span class="price-tag price-mid">€18/adult · €13 (7–12) · under 7 free</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Park+Guell+Barcelona" target="_blank">📍 Map</a>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Park+Guell+Barcelona" target="_blank">📍 Map</a>
+            <a class="link-btn link-web" href="https://www.parkguell.barcelona/en/book-tickets" target="_blank">🌐 Book</a>
           </div>
-          <div class="book-note">🌐 parkguell.barcelona</div>
         </div>
       </div>
       <div class="activity">
-        <div class="act-icon icon-fun">🐟</div>
+        <div class="act-icon icon-culture">⛪</div>
         <div class="act-info">
-          <div class="act-name">L'Aquàrium de Barcelona</div>
-          <div class="act-desc">Europe's largest Mediterranean aquarium. The 80m underwater shark tunnel is unmissable for kids. 2025 renovation added interactive digital floors and AR zones.</div>
+          <div class="act-name">Sagrada Família</div>
+          <div class="act-desc">Gaudí's epic basilica, under construction since 1882. The evening slot (19:00) gives the most spectacular light through the western stained glass windows. Under-11s enter free.</div>
           <div class="act-footer">
-            <span class="price-tag price-high">€29/adult · €22 (5–10)</span>
-            <a class="maps-link" href="https://maps.google.com/?q=L'Aquarium+de+Barcelona+Port+Vell" target="_blank">📍 Map</a>
+            <span class="price-tag price-mid">€26/adult · under 11 free</span>
+            <a class="link-btn link-ticket" href="https://drive.google.com/file/d/1rI2w6GayN9q_ulv8-QOmvHG64CMyCKUI/view?usp=drive_link" target="_blank">🎟️ Your tickets</a>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Sagrada+Familia+Barcelona" target="_blank">📍 Map</a>
           </div>
-          <div class="book-note">🌐 aquariumbcn.com · Port Vell</div>
+        </div>
+      </div>
+      <div class="activity">
+        <div class="act-icon icon-culture">🏛️</div>
+        <div class="act-info">
+          <div class="act-name">Passeig de Gràcia & Block of Discord</div>
+          <div class="act-desc">Barcelona's most elegant boulevard — free to walk. Casa Batlló, Casa Milà, Gaudí-designed pavement tiles, and ornate lamp posts. The Block of Discord has multiple Modernista masterpieces in a single stretch.</div>
+          <div class="act-footer">
+            <span class="price-tag price-free">Free</span>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Passeig+de+Gracia+Block+of+Discord+Barcelona" target="_blank">📍 Map</a>
+          </div>
         </div>
       </div>
       <div class="activity">
         <div class="act-icon icon-fun">🦁</div>
         <div class="act-info">
           <div class="act-name">Barcelona Zoo</div>
-          <div class="act-desc">5,500+ animals in Parc de la Ciutadella. 11 zones including giraffes, gorillas, Komodo dragons, sea lions. Children's farmyard zone. Daily sea lion shows. Picnic areas — bring your own food!</div>
+          <div class="act-desc">5,500+ animals in Parc de la Ciutadella — giraffes, gorillas, Komodo dragons, sea lions, lions. Children's farmyard, daily sea lion shows. Bring your own food to use the picnic areas.</div>
           <div class="act-footer">
-            <span class="price-tag price-mid">€21.40/adult · €12.95 (3–12)</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Zoo+de+Barcelona+Parc+de+la+Ciutadella" target="_blank">📍 Map</a>
+            <span class="price-tag price-mid">€17.26/adult · €11.65 (3–12)</span>
+            <a class="link-btn link-ticket" href="https://drive.google.com/file/d/1tD1cT7w1zXaTOd1iy2C_mT0xc7r_TZKf/view?usp=drive_link" target="_blank">🎟️ Your tickets</a>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Zoo+de+Barcelona+Ciutadella" target="_blank">📍 Map</a>
           </div>
-          <div class="book-note">🌐 zoobarcelona.cat · 15 min walk from Aquarium</div>
+        </div>
+      </div>
+      <div class="activity">
+        <div class="act-icon icon-fun">🐟</div>
+        <div class="act-info">
+          <div class="act-name">L'Aquàrium de Barcelona</div>
+          <div class="act-desc">Europe's largest Mediterranean aquarium. The 80m underwater shark tunnel is unmissable. 2025 renovation added digital floors and AR zones. 15 min walk from the zoo.</div>
+          <div class="act-footer">
+            <span class="price-tag price-high">€29/adult · €22 (5–10)</span>
+            <a class="link-btn link-ticket" href="https://drive.google.com/file/d/1X_DUnlh4kZIt-hUqiYwEmn2LEwHm1JbQ/view?usp=drive_link" target="_blank">🎟️ Your tickets</a>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Aquarium+Barcelona+Port+Vell" target="_blank">📍 Map</a>
+          </div>
         </div>
       </div>
       <div class="activity">
         <div class="act-icon icon-fun">🎡</div>
         <div class="act-info">
           <div class="act-name">Tibidabo Amusement Park</div>
-          <div class="act-desc">One of the world's oldest amusement parks at 512m above the city. 25+ rides, panoramic views, vintage carousels, 1920s Avió plane, Giradabo Ferris wheel, puppet theatre, 4D cinema. Open Wed–Sun from 22 June.</div>
+          <div class="act-desc">One of the world's oldest amusement parks at 512m above Barcelona. Panoramic city views, 25+ rides, vintage carousels, the 1920s Avió plane, Giradabo Ferris wheel, puppet theatre, 4D cinema. Open Wed–Sun from 22 June. Funicular included.</div>
           <div class="act-footer">
             <span class="price-tag price-high">€35/adult · €14 (under 120cm)</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Tibidabo+Amusement+Park+Barcelona" target="_blank">📍 Map</a>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Tibidabo+Amusement+Park+Barcelona" target="_blank">📍 Map</a>
+            <a class="link-btn link-web" href="https://www.tibidabo.cat/en/buy-tickets" target="_blank">🌐 Book</a>
           </div>
-          <div class="book-note">🌐 tibidabo.cat · opens 11:00 · funicular included</div>
-        </div>
-      </div>
-      <div class="activity">
-        <div class="act-icon icon-beach">🏖️</div>
-        <div class="act-info">
-          <div class="act-name">Barceloneta beach (free)</div>
-          <div class="act-desc">Barcelona's most famous urban beach near Port Vell. Perfect for a late afternoon swim after the aquarium/zoo day.</div>
-          <div class="act-footer">
-            <span class="price-tag price-free">Free</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Barceloneta+Beach+Barcelona" target="_blank">📍 Map</a>
-          </div>
+          <div class="book-note">⚠️ Pricing by height: under 120cm = €14, over 120cm = €35 · opens 11:00</div>
         </div>
       </div>
     </div>
@@ -571,242 +983,117 @@
         <div class="act-icon icon-fun">🎢</div>
         <div class="act-info">
           <div class="act-name">PortAventura Park + Ferrari Land</div>
-          <div class="act-desc">Spain's top theme park with 40+ rides. Ferrari Land includes Europe's tallest vertical accelerator. SésamoAventura zone for younger kids. Get the 1-day 2-parks ticket.</div>
+          <div class="act-desc">Spain's top theme park with 40+ rides. Ferrari Land has Europe's tallest vertical accelerator. SésamoAventura zone for younger kids. Get the 1-day 2-parks ticket.</div>
           <div class="act-footer">
             <span class="price-tag price-high">~€50–60/adult · ~€40–50/child</span>
-            <a class="maps-link" href="https://maps.google.com/?q=PortAventura+World+Salou+Spain" target="_blank">📍 Map</a>
+            <a class="link-btn link-ticket" href="https://drive.google.com/file/d/1QkO8iie2bdLFypIyPHbAsByYhaxNO49u/view?usp=drive_link" target="_blank">🎟️ Your tickets</a>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=PortAventura+World+Salou" target="_blank">📍 Map</a>
           </div>
-          <div class="book-note">🌐 portaventuraworld.com · 2km from your apartment</div>
         </div>
       </div>
       <div class="activity">
         <div class="act-icon icon-beach">💧</div>
         <div class="act-info">
           <div class="act-name">Caribe Aquatic Park</div>
-          <div class="act-desc">Caribbean-themed water park: 17 rides, pirate ship kids area, wave pools, lazy river, Europe's tallest freefall slide. New Coral Bay zone in 2026.</div>
+          <div class="act-desc">Caribbean-themed water park: 17 rides, pirate ship kids area, wave pools, lazy river, Europe's tallest freefall slide. New Coral Bay zone 2026. Bring packed lunch.</div>
           <div class="act-footer">
             <span class="price-tag price-mid">~€33/person</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Caribe+Aquatic+Park+Salou+Spain" target="_blank">📍 Map</a>
+            <a class="link-btn link-ticket" href="https://drive.google.com/file/d/1S5__IANftnft__LsTtshfVQVDmMor7xs/view?usp=drive_link" target="_blank">🎟️ Your tickets</a>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Caribe+Aquatic+Park+Salou" target="_blank">📍 Map</a>
           </div>
-          <div class="book-note">🌐 portaventuraworld.com or GetYourGuide</div>
         </div>
       </div>
       <div class="activity">
         <div class="act-icon icon-beach">🏖️</div>
         <div class="act-info">
           <div class="act-name">Salou beaches</div>
-          <div class="act-desc">Blue Flag beaches with calm, shallow water. Playa de Ponent is calmer and more family-friendly. Your apartment is just 50m from the sea!</div>
+          <div class="act-desc">Blue Flag beaches with calm shallow water. Playa de Ponent is calmer and more family-friendly. Platja Llarga is quieter. Your apartment is 50m from the sea!</div>
           <div class="act-footer">
             <span class="price-tag price-free">Free</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Playa+de+Salou" target="_blank">📍 Playa Salou</a>
-            <a class="maps-link" href="https://maps.google.com/?q=Playa+de+Ponent+Salou" target="_blank">📍 Playa de Ponent</a>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Playa+de+Salou" target="_blank">📍 Playa Salou</a>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Playa+de+Ponent+Salou" target="_blank">📍 Playa de Ponent</a>
           </div>
         </div>
       </div>
       <div class="activity">
         <div class="act-icon icon-culture">⚓</div>
         <div class="act-info">
-          <div class="act-name">Cambrils day trip</div>
-          <div class="act-desc">7km south — charming fishing harbour, medieval watchtower, and excellent fresh seafood. Perfect half-day with the car.</div>
+          <div class="act-name">Cambrils harbour (departure day)</div>
+          <div class="act-desc">7km south by car — charming fishing harbour, medieval watchtower, and some of the best seafood on the Costa Dorada. Perfect final morning before the airport.</div>
           <div class="act-footer">
             <span class="price-tag price-free">Free to visit</span>
-            <a class="maps-link" href="https://maps.google.com/?q=Port+de+Cambrils" target="_blank">📍 Cambrils Harbour</a>
+            <a class="link-btn link-map" href="https://maps.google.com/?q=Port+de+Cambrils" target="_blank">📍 Cambrils Harbour</a>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-</div><!-- end activities -->
-
-<!-- ======================== FOOD ======================== -->
+<!-- ===== RESTAURANTS ===== -->
 <div id="food" class="section">
-
   <div class="city-label city-bcn">Barcelona restaurants</div>
-  <div class="tip-box" style="margin-bottom:1.5rem">
-    <p><strong>Best value trick:</strong> Look for the <strong>menú del día</strong> at lunch — typically 2 courses + dessert + drink for €12–15/adult. This is how locals eat well without spending a fortune. Kids often get half portions for less.</p>
+  <div class="tip-box" style="margin: 0 0 1.25rem; border-radius: var(--radius-sm);">
+    <p><strong>Best value trick:</strong> Order the <strong>menú del día</strong> at lunch — 2 courses + dessert + drink for €12–16/adult. This is how locals eat well affordably. Have a lighter dinner most nights.</p>
   </div>
   <div class="rest-grid" style="margin-bottom:2rem">
-    <div class="rest-card">
-      <div class="rest-name">Cerveceria Catalana</div>
-      <span class="rest-type type-local">Catalan tapas</span>
-      <div class="rest-desc">One of Barcelona's most loved tapas bars. Great patatas bravas, croquettes, and pan con tomate. Near Passeig de Gràcia — easy from the Gaudí route.</div>
-      <a class="rest-maps" href="https://maps.google.com/?q=Cerveceria+Catalana+Barcelona" target="_blank">📍 Map</a>
-    </div>
-    <div class="rest-card">
-      <div class="rest-name">La Cova Fumada</div>
-      <span class="rest-type type-local">Seafood · local gem</span>
-      <div class="rest-desc">Legendary Barceloneta spot, birthplace of the Bombas. Cash only, no reservations — arrive early. Very authentic and cheap.</div>
-      <a class="rest-maps" href="https://maps.google.com/?q=La+Cova+Fumada+Barceloneta+Barcelona" target="_blank">📍 Map</a>
-    </div>
-    <div class="rest-card">
-      <div class="rest-name">Bar del Pla</div>
-      <span class="rest-type type-tapas">Tapas · casual</span>
-      <div class="rest-desc">Gothic Quarter favourite. Great vermouth, montaditos, and fresh seafood tapas. Relaxed and family-friendly at lunch.</div>
-      <a class="rest-maps" href="https://maps.google.com/?q=Bar+del+Pla+Barcelona+Gothic+Quarter" target="_blank">📍 Map</a>
-    </div>
-    <div class="rest-card">
-      <div class="rest-name">La Paradeta</div>
-      <span class="rest-type type-local">Seafood · kids love it</span>
-      <div class="rest-desc">Pick your fresh seafood from a counter, they cook it in front of you. Kids find it fascinating. Very affordable — multiple locations in Barcelona.</div>
-      <a class="rest-maps" href="https://maps.google.com/?q=La+Paradeta+Barcelona" target="_blank">📍 Map</a>
-    </div>
-    <div class="rest-card">
-      <div class="rest-name">El Xampanyet</div>
-      <span class="rest-type type-local">Catalan traditional</span>
-      <div class="rest-desc">Tiny classic bar near the Picasso Museum. House cava, anchovies, jamón. An authentic local El Born experience.</div>
-      <a class="rest-maps" href="https://maps.google.com/?q=El+Xampanyet+Barcelona+El+Born" target="_blank">📍 Map</a>
-    </div>
-    <div class="rest-card">
-      <div class="rest-name">Pino's Pizza</div>
-      <span class="rest-type type-intl">Italian · kid-friendly</span>
-      <div class="rest-desc">Good pizza and pasta at fair prices. A safe and reliable backup when the kids need something familiar after a day of sightseeing.</div>
-      <a class="rest-maps" href="https://maps.google.com/?q=Pino+Pizza+Barcelona" target="_blank">📍 Map</a>
-    </div>
+    <div class="rest-card"><div class="rest-card-name">Cerveceria Catalana</div><span class="rest-card-type tag-tapas">Tapas</span><div class="rest-card-desc">One of Barcelona's most loved tapas bars. Patatas bravas, croquettes, pan con tomate. Near Passeig de Gràcia.</div><a class="link-btn link-map" href="https://maps.google.com/?q=Cerveceria+Catalana+Barcelona" target="_blank">📍 Map</a></div>
+    <div class="rest-card"><div class="rest-card-name">Benzina Restaurant</div><span class="rest-card-type tag-intl">Italian · Sant Antoni</span><div class="rest-card-desc">Exceptional handmade pasta near your Sants apartment. Warm atmosphere, great carbonara, outstanding staff. One of the best Italian spots in Barcelona.</div><a class="link-btn link-map" href="https://maps.google.com/?q=Benzina+Restaurant+Sant+Antoni+Barcelona" target="_blank">📍 Map</a></div>
+    <div class="rest-card"><div class="rest-card-name">Casa Delfín</div><span class="rest-card-type tag-local">Catalan · El Born</span><div class="rest-card-desc">100-year-old Catalan institution near the zoo. Salt cod, meat stews, local fish. Excellent menú del día value.</div><a class="link-btn link-map" href="https://maps.google.com/?q=Casa+Delfin+El+Born+Barcelona" target="_blank">📍 Map</a></div>
+    <div class="rest-card"><div class="rest-card-name">Bar del Pla</div><span class="rest-card-type tag-tapas">Tapas · El Born</span><div class="rest-card-desc">Gothic Quarter/El Born favourite. Great vermouth and montaditos. Relaxed, family-friendly at lunch, great prices.</div><a class="link-btn link-map" href="https://maps.google.com/?q=Bar+del+Pla+El+Born+Barcelona" target="_blank">📍 Map</a></div>
+    <div class="rest-card"><div class="rest-card-name">La Cova Fumada</div><span class="rest-card-type tag-seafood">Seafood · Barceloneta</span><div class="rest-card-desc">Legendary birthplace of the Bombas. Cash only, no reservations. Very cheap and very authentic. Arrive early.</div><a class="link-btn link-map" href="https://maps.google.com/?q=La+Cova+Fumada+Barceloneta+Barcelona" target="_blank">📍 Map</a></div>
+    <div class="rest-card"><div class="rest-card-name">El Nacional</div><span class="rest-card-type tag-local">Food hall · Eixample</span><div class="rest-card-desc">Stunning food market hall with 8 restaurant concepts under one roof. Great atmosphere, something for everyone. Family-friendly.</div><a class="link-btn link-map" href="https://maps.google.com/?q=El+Nacional+Barcelona" target="_blank">📍 Map</a></div>
+    <div class="rest-card"><div class="rest-card-name">Etapes Restaurant</div><span class="rest-card-type tag-local">Mediterranean · Eixample</span><div class="rest-card-desc">Inexpensive and excellent near Casa Batlló. Burrata, paella, suckling pig at fair prices. Outdoor seating when available.</div><a class="link-btn link-map" href="https://maps.google.com/?q=Etapes+Restaurant+Barcelona+Eixample" target="_blank">📍 Map</a></div>
+    <div class="rest-card"><div class="rest-card-name">The Bronzo</div><span class="rest-card-type tag-intl">Italian · El Born</span><div class="rest-card-desc">Family-focused Italian right next to the zoo. ~€15/person, handmade pasta, great for kids who want something familiar.</div><a class="link-btn link-map" href="https://maps.google.com/?q=The+Bronzo+El+Born+Barcelona" target="_blank">📍 Map</a></div>
   </div>
 
   <div class="city-label city-salou">Salou restaurants</div>
-  <div class="tip-box" style="margin-bottom:1.5rem">
-    <p><strong>Salou tip:</strong> Avoid the tourist-trap restaurants right on the main beachfront strip — they charge 30–40% more for the same food. Walk one or two streets back for better quality and lower prices. Always check for the menú del día boards.</p>
+  <div class="tip-box" style="margin: 0 0 1.25rem; border-radius: var(--radius-sm);">
+    <p><strong>Salou tip:</strong> Avoid restaurants directly on the main tourist promenade — walk one or two streets back for better quality and 30–40% lower prices. Always check for menú del día boards.</p>
   </div>
+  <div class="rest-grid" style="margin-bottom:2rem">
+    <div class="rest-card"><div class="rest-card-name">Catalunya 92</div><span class="rest-card-type tag-seafood">Seafood · Tapas</span><div class="rest-card-desc">Family-friendly, consistently praised for fresh seafood. Garlic prawns, patatas bravas, squid. Great menú del día.</div><a class="link-btn link-map" href="https://maps.google.com/?q=Catalunya+92+Restaurant+Salou" target="_blank">📍 Map</a></div>
+    <div class="rest-card"><div class="rest-card-name">La Taverna</div><span class="rest-card-type tag-local">Spanish</span><div class="rest-card-desc">Top-rated family restaurant (9.7 TheFork). Warm atmosphere, great paella and grilled meats. Excellent value.</div><a class="link-btn link-map" href="https://maps.google.com/?q=La+Taverna+Restaurant+Salou" target="_blank">📍 Map</a></div>
+    <div class="rest-card"><div class="rest-card-name">O Mar</div><span class="rest-card-type tag-seafood">Seafood</span><div class="rest-card-desc">Excellent fresh fish, best seafood paella in Salou according to regulars. Great sharing platters.</div><a class="link-btn link-map" href="https://maps.google.com/?q=O+Mar+Restaurant+Salou" target="_blank">📍 Map</a></div>
+    <div class="rest-card"><div class="rest-card-name">Panorama Nikkei Bar</div><span class="rest-card-type tag-intl">Asian · Mediterranean</span><div class="rest-card-desc">Nikkei fusion with terrace. Gyozas, ceviche, maki, scallops. Highly rated (4.7/5). Great for adults, varied enough for kids.</div><a class="link-btn link-map" href="https://maps.google.com/?q=Panorama+Nikkei+Bar+Salou" target="_blank">📍 Map</a></div>
+    <div class="rest-card"><div class="rest-card-name">Cook and Travel</div><span class="rest-card-type tag-intl">Mediterranean</span><div class="rest-card-desc">Terrace seating, 9.5 on TheFork. Creative but approachable menu. One of the best all-round restaurants in Salou.</div><a class="link-btn link-map" href="https://maps.google.com/?q=Cook+and+Travel+Restaurant+Salou" target="_blank">📍 Map</a></div>
+    <div class="rest-card"><div class="rest-card-name">Amore Beach Club</div><span class="rest-card-type tag-intl">International</span><div class="rest-card-desc">Boho beachfront spot — bowls, burritos, burgers, salads. Great for kids, very relaxed. Popular with families for lunch.</div><a class="link-btn link-map" href="https://maps.google.com/?q=Amore+Beach+Club+Salou" target="_blank">📍 Map</a></div>
+    <div class="rest-card"><div class="rest-card-name">La Morera</div><span class="rest-card-type tag-tapas">Tapas</span><div class="rest-card-desc">Hidden gem with excellent tapas — octopus, bravas, paella. Consistently high quality and great service. Very popular.</div><a class="link-btn link-map" href="https://maps.google.com/?q=La+Morera+Restaurant+Salou" target="_blank">📍 Map</a></div>
+    <div class="rest-card"><div class="rest-card-name">Chai Indian Cuisine</div><span class="rest-card-type tag-intl">Indian</span><div class="rest-card-desc">Authentic Indian, 5 min drive in Vilaseca. Excellent when kids need something familiar. Fair prices, popular with families.</div><a class="link-btn link-map" href="https://maps.google.com/?q=Chai+Indian+Cuisine+Vilaseca" target="_blank">📍 Map</a></div>
+  </div>
+
+  <div class="city-label city-salou" style="background: #EDF5E8; color: #2E6B1A;">Cambrils (1 July)</div>
   <div class="rest-grid">
-    <div class="rest-card">
-      <div class="rest-name">Catalunya 92</div>
-      <span class="rest-type type-local">Seafood · tapas</span>
-      <div class="rest-desc">Family-friendly and consistently praised for fresh seafood. Garlic prawns, patatas bravas, squid. Good value menú del día.</div>
-      <a class="rest-maps" href="https://maps.google.com/?q=Catalunya+92+Restaurant+Salou" target="_blank">📍 Map</a>
-    </div>
-    <div class="rest-card">
-      <div class="rest-name">La Taverna</div>
-      <span class="rest-type type-local">Spanish traditional</span>
-      <div class="rest-desc">Top-rated for families on a budget (9.7 on TheFork). Warm atmosphere, good paella and grilled meats at very reasonable prices.</div>
-      <a class="rest-maps" href="https://maps.google.com/?q=La+Taverna+Salou" target="_blank">📍 Map</a>
-    </div>
-    <div class="rest-card">
-      <div class="rest-name">O Mar</div>
-      <span class="rest-type type-local">Seafood</span>
-      <div class="rest-desc">Excellent fresh fish, family-friendly. "Best fish in Salou" according to many regulars. Great seafood platters for sharing.</div>
-      <a class="rest-maps" href="https://maps.google.com/?q=O+Mar+Restaurant+Salou" target="_blank">📍 Map</a>
-    </div>
-    <div class="rest-card">
-      <div class="rest-name">Cook and Travel</div>
-      <span class="rest-type type-intl">Mediterranean fusion</span>
-      <div class="rest-desc">Terrace seating, highly rated (9.5 on TheFork), broad appeal for all ages. One of the best overall restaurants in Salou.</div>
-      <a class="rest-maps" href="https://maps.google.com/?q=Cook+and+Travel+Salou" target="_blank">📍 Map</a>
-    </div>
-    <div class="rest-card">
-      <div class="rest-name">Chai Indian Cuisine</div>
-      <span class="rest-type type-intl">Indian · kid-friendly</span>
-      <div class="rest-desc">Fantastic when the kids want something familiar. Authentic Indian food at fair prices. 5 min drive in nearby Vilaseca.</div>
-      <a class="rest-maps" href="https://maps.google.com/?q=Chai+Indian+Cuisine+Vilaseca+Salou" target="_blank">📍 Map</a>
-    </div>
-    <div class="rest-card">
-      <div class="rest-name">Panorama Nikkei Bar</div>
-      <span class="rest-type type-intl">Asian Mediterranean</span>
-      <div class="rest-desc">Fusion cuisine with terrace seating. Great cocktails for adults, soft drinks for kids. Highly rated and good value — popular with families.</div>
-      <a class="rest-maps" href="https://maps.google.com/?q=Panorama+Nikkei+Bar+Salou" target="_blank">📍 Map</a>
-    </div>
+    <div class="rest-card"><div class="rest-card-name">El Pòsit</div><span class="rest-card-type tag-seafood">Seafood · Harbour</span><div class="rest-card-desc">Widely considered the best restaurant in Cambrils — fresh seafood, beautiful harbour-side setting, excellent paella. Book in advance in summer.</div><a class="link-btn link-map" href="https://maps.google.com/?q=El+Posit+Cambrils" target="_blank">📍 Map</a></div>
+    <div class="rest-card"><div class="rest-card-name">Restaurant Montserrat</div><span class="rest-card-type tag-local">Catalan Seafood</span><div class="rest-card-desc">Away from the tourist strip, charming and authentic. Simple fresh seafood, set menus at reasonable prices. Very good value.</div><a class="link-btn link-map" href="https://maps.google.com/?q=Restaurant+Montserrat+Cambrils" target="_blank">📍 Map</a></div>
+    <div class="rest-card"><div class="rest-card-name">Restaurant Acuamar</div><span class="rest-card-type tag-seafood">Seafood · Harbour</span><div class="rest-card-desc">Family-run since 1977, harbour-side. Oven-baked sea bream and baby octopus from local Cambrils fishermen. Warm, attentive service.</div><a class="link-btn link-map" href="https://maps.google.com/?q=Restaurant+Acuamar+Cambrils" target="_blank">📍 Map</a></div>
   </div>
+</div>
 
-</div><!-- end food -->
-
-<!-- ======================== TIPS ======================== -->
+<!-- ===== TIPS ===== -->
 <div id="tips" class="section">
-
-  <div class="section-heading">Estimated budget</div>
+  <div class="section-heading">Estimated budget (activities only)</div>
   <div class="summary-grid">
-    <div class="sum-card"><div class="sum-num" style="color:#1D9E75">~€320</div><div class="sum-label">Barcelona attractions</div></div>
-    <div class="sum-card"><div class="sum-num" style="color:#185FA5">~€320</div><div class="sum-label">Salou parks &amp; activities</div></div>
-    <div class="sum-card"><div class="sum-num" style="color:#854F0B">~€300</div><div class="sum-label">Meals (10 days est.)</div></div>
-    <div class="sum-card"><div class="sum-num" style="color:#5F5E5A">~€50</div><div class="sum-label">Transport &amp; tolls</div></div>
+    <div class="sum-card"><div class="sum-num" style="color:#1D9E75">~€370</div><div class="sum-label">Barcelona attractions</div></div>
+    <div class="sum-card"><div class="sum-num" style="color:#185FA5">~€320</div><div class="sum-label">Salou parks</div></div>
+    <div class="sum-card"><div class="sum-num" style="color:#854F0B">~€320</div><div class="sum-label">Meals 10 days (est.)</div></div>
+    <div class="sum-card"><div class="sum-num" style="color:#5F5E5A">~€60</div><div class="sum-label">Transport & tolls</div></div>
   </div>
 
-  <div class="section-heading">Money-saving tips</div>
+  <div class="section-heading">Key tips</div>
   <div class="day-card" style="margin-bottom:1.5rem">
     <div class="day-body">
-      <div class="activity">
-        <div class="act-icon icon-culture">🎟️</div>
-        <div class="act-info">
-          <div class="act-name">Book everything online in advance</div>
-          <div class="act-desc">Sagrada Família, Park Güell, and the Aquarium all require advance booking in June. You save money vs. door prices and guarantee your slot. Same for PortAventura and Tibidabo.</div>
-        </div>
-      </div>
-      <div class="activity">
-        <div class="act-icon icon-food">🕐</div>
-        <div class="act-info">
-          <div class="act-name">Lunch is the main meal of the day</div>
-          <div class="act-desc">The menú del día at lunch (€12–16/adult) gives you starter + main + dessert + drink. Have a lighter dinner. This dramatically cuts daily food costs for the whole trip.</div>
-        </div>
-      </div>
-      <div class="activity">
-        <div class="act-icon icon-fun">🍎</div>
-        <div class="act-info">
-          <div class="act-name">Bring snacks and picnic lunches to parks</div>
-          <div class="act-desc">Food inside theme parks (PortAventura, Caribe, Tibidabo) is very expensive. The Barcelona Zoo explicitly allows your own food with dedicated picnic areas. Buy water at a supermarket — a 6-pack costs under €2.</div>
-        </div>
-      </div>
-      <div class="activity">
-        <div class="act-icon icon-transport">🚇</div>
-        <div class="act-info">
-          <div class="act-name">Metro in Barcelona, car in Salou</div>
-          <div class="act-desc">In Barcelona, use the T-Casual card (€12.15 for 10 metro trips). For Tibidabo, park at BSM Sant Genís (cheaper) and take TibiBus T2B up. In Salou, your rental car gives full flexibility.</div>
-        </div>
-      </div>
-      <div class="activity">
-        <div class="act-icon icon-beach">⚠️</div>
-        <div class="act-info">
-          <div class="act-name">Tibidabo height-based pricing</div>
-          <div class="act-desc">Tickets are priced by height, not age. Under 120cm = €14; over 120cm = €35 (adult). Check your kids' heights before booking to budget correctly.</div>
-        </div>
-      </div>
-      <div class="activity">
-        <div class="act-icon icon-transport">🛣️</div>
-        <div class="act-info">
-          <div class="act-name">AP-7 motorway tolls</div>
-          <div class="act-desc">The drive between Barcelona and Salou uses the AP-7 motorway. Budget ~€8–12 per journey in tolls. Keep coins or a card ready at the toll booth. Total distance is about 110km.</div>
-        </div>
-      </div>
+      <div class="activity"><div class="act-icon icon-culture">🎟️</div><div class="act-info"><div class="act-name">Book everything in advance</div><div class="act-desc">Sagrada Família, Park Güell, and the Aquarium all sell out weeks ahead in June. Buy online — you save money and guarantee your slot. Same for PortAventura. El Pòsit in Cambrils also needs a reservation in summer.</div></div></div>
+      <div class="activity"><div class="act-icon icon-food">🕑</div><div class="act-info"><div class="act-name">Use the menú del día at lunch</div><div class="act-desc">Starter + main + dessert + drink for €12–16/adult at lunch. Have lighter, cheaper dinners. This is how you eat very well in Spain without overspending. Kids often get half-portions for much less.</div></div></div>
+      <div class="activity"><div class="act-icon icon-fun">🍎</div><div class="act-info"><div class="act-name">Bring packed food to parks</div><div class="act-desc">Tibidabo, PortAventura, and Caribe all have very expensive food inside. Barcelona Zoo explicitly allows your own food with picnic areas. Buy a 6-pack of water from a supermarket (under €2) instead of buying individual bottles.</div></div></div>
+      <div class="activity"><div class="act-icon icon-transport">🚇</div><div class="act-info"><div class="act-name">T-Casual metro card in Barcelona</div><div class="act-desc">€12.15 for 10 trips — reloadable, works for the whole family on each tap. Far cheaper than buying single tickets. Covers all metro lines including L9 from the airport.</div></div></div>
+      <div class="activity"><div class="act-icon icon-beach">⚠️</div><div class="act-info"><div class="act-name">Tibidabo is priced by height, not age</div><div class="act-desc">Under 120cm = €14 · Over 120cm = €35 (adult price). Check your kids' heights before booking. Also confirm the park is open on 25 June on tibidabo.cat — Wed–Sun from 22 June.</div></div></div>
+      <div class="activity"><div class="act-icon icon-transport">🛣️</div><div class="act-info"><div class="act-name">AP-7 motorway tolls</div><div class="act-desc">Barcelona ↔ Salou via AP-7 is ~€8–12 each way in tolls. Budget for 3 toll journeys total (El Prat → Tibidabo → Salou on 25 Jun, and Salou → El Prat on 1 Jul). Keep a card handy at the booth.</div></div></div>
+      <div class="activity"><div class="act-icon icon-transport">🌡️</div><div class="act-info"><div class="act-name">Weather & packing</div><div class="act-desc">28–33°C throughout the trip. Pack factor 50 sunscreen (especially for the kids), hats, refillable water bottles, and light clothing. A small rucksack for park days is essential — packed lunch, water, sunscreen, change of clothes.</div></div></div>
+      <div class="activity"><div class="act-icon icon-fun">🚑</div><div class="act-info"><div class="act-name">Emergency numbers in Spain</div><div class="act-desc">General emergency: 112 · Police (Mossos d'Esquadra): 088 · Medical emergency: 061 · All work from any phone including foreign numbers without needing a local SIM.</div></div></div>
     </div>
   </div>
-
-  <div class="section-heading">Practical info</div>
-  <div class="day-card">
-    <div class="day-body">
-      <div class="activity">
-        <div class="act-icon icon-transport">🌡️</div>
-        <div class="act-info">
-          <div class="act-name">Weather in late June</div>
-          <div class="act-desc">Expect 28–33°C in both Barcelona and Salou. Sun from morning to evening. Pack light clothing, factor-50 sunscreen (especially for the kids), hats, and refillable water bottles.</div>
-        </div>
-      </div>
-      <div class="activity">
-        <div class="act-icon icon-food">🕘</div>
-        <div class="act-info">
-          <div class="act-name">Spanish meal times</div>
-          <div class="act-desc">Lunch 2pm–4pm, dinner from 9pm onwards. Restaurants before 8pm are quiet; after 9pm they fill up. Kids menus (menú infantil) are common at family restaurants across Catalonia.</div>
-        </div>
-      </div>
-      <div class="activity">
-        <div class="act-icon icon-beach">📍</div>
-        <div class="act-info">
-          <div class="act-name">Your Salou apartment</div>
-          <div class="act-desc">Carrer de la Verge del Pilar is very central — walking distance to beaches and restaurants, and just 2km from PortAventura World. With the rental car you also have easy access to Cambrils.</div>
-          <div class="act-footer">
-            <a class="maps-link" href="https://maps.google.com/?q=16+Carrer+de+la+Verge+del+Pilar+Salou+43840" target="_blank">📍 Your apartment location</a>
-          </div>
-        </div>
-      </div>
-      <div class="activity">
-        <div class="act-icon icon-transport">🚑</div>
-        <div class="act-info">
-          <div class="act-name">Emergency numbers in Spain</div>
-          <div class="act-desc">General emergency: 112. Police (Mossos d'Esquadra in Catalonia): 088. Medical emergency: 061. These work from any phone including foreign numbers.</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div><!-- end tips -->
+</div>
 
 </div><!-- end main -->
 
